@@ -46,20 +46,24 @@ const HomePage = () => {
       <div
         id="about"
         className="about-section text-white lg:pl-[90px] bg-section">
-        <div className="about-container max-w-7xl mx-auto py-28 sm:py-36 md:py-44 px-6">
+        <div className="about-container max-w-7xl mx-auto py-10 sm:py-16 md:py-24 px-6">
           <div className="about-content py-3 px-5 md:px-10 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded-2xl">
             <div className="about-me flex flex-col-reverse md:flex-row gap-y-5 md:gap-0  justify-between">
-              <div className="md:w-4/6 flex flex-col md:pr-5 gap-y-4 justify-center">
+              <div className="md:w-4/6 flex flex-col md:pr-5 gap-y-6 justify-center">
                 <h1 className="text-xl text-center md:text-start font-medium text-sky-400">
                   About Me
                 </h1>
                 <h2 className="leading-7 lg:leading-8 text-justify md:text-start font-light text-md lg:text-lg">
-                  A Fullstack Web and Mobile Developer from Cagayan de Oro,
-                  Philippines that specializes in React.js, Node.js, and
-                  Laravel. Recently, I graduated from University of Science and
-                  Technology of Southern Philippines. I am passionate in
-                  building quality website, web apps, and mobile apps that will
-                  help solve your personal and business needs.
+                  I am a Fullstack{" "}
+                  <span className="text-sky-400">Web and Mobile Developer</span>{" "}
+                  from Cagayan de Oro, Philippines that specializes in React.js,
+                  Node.js, and Laravel. Recently, I graduated from{" "}
+                  <span className="text-sky-400">
+                    University of Science and Technology of Southern Philippines
+                  </span>
+                  . I am passionate in building quality website, web apps, and
+                  mobile apps that will help solve your personal and business
+                  needs.
                 </h2>
               </div>
               <div className="w-2/3 md:w-2/6 mx-auto flex justify-center md:justify-end">
