@@ -56,7 +56,7 @@ const HomePage = () => {
                 <h2 className="leading-7 lg:leading-8 text-justify md:text-start font-light text-md lg:text-lg">
                   I am a Fullstack{" "}
                   <span className="text-sky-400">Web and Mobile Developer</span>{" "}
-                  from Camiguin Province, Philippines that specializes in
+                  from Camiguin Island, Philippines that specializes in
                   React.js, Node.js, and Laravel. Recently, I graduated from{" "}
                   <span className="text-sky-400">
                     University of Science and Technology of Southern Philippines
