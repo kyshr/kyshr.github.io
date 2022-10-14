@@ -1,7 +1,9 @@
 import React from "react";
 import me from "../../assets/images/me.png";
-import mePhone from "../../assets/images/me-laptop.png";
 import { TypeAnimation } from "react-type-animation";
+import Skill from "../../components/skill";
+import * as DevIcons from "react-icons/di";
+import * as SimpIcons from "react-icons/si";
 
 const HomePage = () => {
   return (
@@ -30,13 +32,12 @@ const HomePage = () => {
             <div className="me-btns flex justify-center sm:justify-start gap-x-4 mt-4">
               <button
                 type="button"
-                className="text-white uppercase border border-sky-400 hover:bg-sky-500 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2">
+                className="text-white uppercase border border-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 text-center mr-2 mb-2">
                 Download CV
               </button>
-
               <button
                 type="button"
-                className="text-white uppercase bg-sky-400 hover:bg-sky-500 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-3 mr-2 mb-2">
+                className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 mr-2 mb-2">
                 About Me
               </button>
             </div>
@@ -46,13 +47,18 @@ const HomePage = () => {
       <div
         id="about"
         className="about-section text-white lg:pl-[90px] bg-section">
-        <div className="about-container max-w-7xl mx-auto py-10 sm:py-16 md:py-24 px-6">
+        <div className="about-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-6">
+          <div className="about-title uppercase relative inline-block mb-20">
+            <div className="mb-3">
+              <span className="text-xs before:content-[''] before:absolute before:w-8 before:h-[2px] before:bg-sky-400 before:left-0 before:top-3 pl-10">
+                More Info
+              </span>
+            </div>
+            <h1 className="text-3xl font-medium text-sky-400">About Me</h1>
+          </div>
           <div className="about-content py-3 px-5 md:px-10 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded-2xl">
             <div className="about-me flex flex-col-reverse md:flex-row gap-y-5 md:gap-0  justify-between">
               <div className="md:w-4/6 flex flex-col md:pr-5 gap-y-6 justify-center">
-                <h1 className="text-xl text-center md:text-start font-medium text-sky-400">
-                  About Me
-                </h1>
                 <h2 className="leading-7 lg:leading-8 text-justify md:text-start font-light text-md lg:text-lg">
                   I am a Fullstack{" "}
                   <span className="text-sky-400">Web and Mobile Developer</span>{" "}
@@ -65,10 +71,47 @@ const HomePage = () => {
                   mobile apps that will help solve your personal and business
                   needs.
                 </h2>
+                <div>
+                  <button
+                    type="button"
+                    className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 mr-2 mb-2">
+                    Contact Me
+                  </button>
+                </div>
               </div>
               <div className="w-2/3 md:w-2/6 mx-auto flex justify-center md:justify-end">
                 <img src={me} alt="myself" />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="skills"
+        className="skills-section text-white lg:pl-[90px] bg-section">
+        <div className="skills-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-6">
+          <div className="skills-title uppercase relative inline-block mb-20">
+            <div className="mb-3">
+              <span className="text-xs before:content-[''] before:absolute before:w-8 before:h-[2px] before:bg-sky-400 before:left-0 before:top-3 pl-10">
+                Take A Look At
+              </span>
+            </div>
+            <h1 className="text-3xl font-medium text-sky-400">My Skills</h1>
+          </div>
+          <div className="skills-content py-5 md:py-10 px-5 md:px-10 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded-2xl">
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-6 lg:gap-10">
+              <Skill Icon={DevIcons.DiHtml5} name={"HTML"} />
+              <Skill Icon={DevIcons.DiCss3} name={"CSS"} />
+              <Skill Icon={DevIcons.DiReact} name={"React JS"} />
+              <Skill Icon={SimpIcons.SiNextdotjs} name={"Next JS"} />
+              <Skill Icon={DevIcons.DiNodejsSmall} name={"Node JS"} />
+              <Skill Icon={SimpIcons.SiExpress} name={"Express JS"} />
+              <Skill Icon={SimpIcons.SiStrapi} name={"Strapi"} />
+              <Skill Icon={SimpIcons.SiFlutter} name={"Flutter"} />
+              <Skill Icon={DevIcons.DiLaravel} name={"Laravel"} />
+              <Skill Icon={DevIcons.DiMongodb} name={"Mongo DB"} />
+              <Skill Icon={DevIcons.DiMysql} name={"MySQL"} />
+              <Skill Icon={SimpIcons.SiGit} name={"Git"} />
             </div>
           </div>
         </div>
