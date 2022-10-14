@@ -6,11 +6,11 @@ const MainWrapper = () => {
   return (
     <div className="main-wrapper">
       <HashRouter basename="/">
-        <Routes>
-          <Layout>
+        <Layout>
+          <Routes>
             <Route path="/" element={<HomePage />} />
-          </Layout>
-        </Routes>
+          </Routes>
+        </Layout>
       </HashRouter>
     </div>
   );
