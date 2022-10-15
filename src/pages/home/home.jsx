@@ -8,7 +8,7 @@ import * as SimpIcons from "react-icons/si";
 const HomePage = () => {
   return (
     <>
-      <div id="home" className="home-section text-white lg:pl-[90px]">
+      <section id="home" className="home-section text-white lg:pl-[90px]">
         <div className="home-container max-w-7xl mx-auto py-28 sm:py-36 md:py-44 px-6">
           <div className="me-content max-w-3xl lg:max-w-5xl mx-auto flex flex-col justify-center gap-y-5">
             <p className="text-md lg:text-lg text-center sm:text-start uppercase">
@@ -43,8 +43,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         id="about"
         className="about-section text-white lg:pl-[90px] bg-section">
         <div className="about-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-6">
@@ -85,8 +85,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         id="skills"
         className="skills-section text-white lg:pl-[90px] bg-section">
         <div className="skills-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-6">
@@ -115,7 +115,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
