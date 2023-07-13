@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import Skill from "../../components/skill";
 import * as DevIcons from "react-icons/di";
 import * as SimpIcons from "react-icons/si";
+import { HiMail } from "react-icons/hi";
 import { projects } from "../../utils/projects";
 import Project from "../../components/project";
 
@@ -42,12 +43,12 @@ const HomePage = () => {
                         <div className="me-btns flex justify-center sm:justify-start gap-x-4 mt-4">
                             <button
                                 type="button"
-                                className="text-white uppercase border border-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 text-center mr-2 mb-2">
+                                className="text-white uppercase border border-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 text-center mr-2">
                                 Download CV
                             </button>
                             <button
                                 type="button"
-                                className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 mr-2 mb-2">
+                                className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 mr-2">
                                 About Me
                             </button>
                         </div>
@@ -57,7 +58,7 @@ const HomePage = () => {
             <section
                 id="about"
                 className="about-section text-white lg:pl-[90px] bg-section">
-                <div className="about-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-4">
+                <div className="about-container max-w-7xl mx-auto py-10 px-4">
                     <div className="about-title uppercase relative inline-block mb-20">
                         <div className="mb-3">
                             <span className="text-xs before:content-[''] before:absolute before:w-8 before:h-[2px] before:bg-sky-400 before:left-0 before:top-3 pl-10">
@@ -105,7 +106,7 @@ const HomePage = () => {
             <section
                 id="skills"
                 className="skills-section text-white lg:pl-[90px] bg-section">
-                <div className="skills-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-4">
+                <div className="skills-container max-w-7xl mx-auto py-10 px-4">
                     <div className="skills-title uppercase relative inline-block mb-20">
                         <div className="mb-3">
                             <span className="text-xs before:content-[''] before:absolute before:w-8 before:h-[2px] before:bg-sky-400 before:left-0 before:top-3 pl-10">
@@ -138,7 +139,10 @@ const HomePage = () => {
                                 Icon={SimpIcons.SiFlutter}
                                 name={"Flutter"}
                             />
-                            <Skill Icon={DevIcons.DiLaravel} name={"Laravel"} />
+                            <Skill
+                                Icon={SimpIcons.SiTensorflow}
+                                name={"Tensorflow"}
+                            />
                             <Skill
                                 Icon={DevIcons.DiMongodb}
                                 name={"Mongo DB"}
@@ -152,7 +156,7 @@ const HomePage = () => {
             <section
                 id="projects"
                 className="projects-section text-white lg:pl-[90px] bg-section">
-                <div className="projects-container max-w-7xl mx-auto py-20 sm:py-24 md:py-32 px-4">
+                <div className="projects-container max-w-7xl mx-auto py-10 px-4">
                     <div className="projects-title uppercase relative inline-block mb-20">
                         <div className="mb-3">
                             <span className="text-xs before:content-[''] before:absolute before:w-8 before:h-[2px] before:bg-sky-400 before:left-0 before:top-3 pl-10">
@@ -172,9 +176,45 @@ const HomePage = () => {
                                         title={project.title}
                                         description={project.description}
                                         image={project.image}
+                                        tech={project.tech}
                                     />
                                 );
                             })}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                id="contact"
+                className="contact-section text-white lg:pl-[90px] bg-section">
+                <div className="contact-container max-w-7xl mx-auto py-10 px-4">
+                    <div className="contact-title uppercase relative inline-block mb-20">
+                        <div className="mb-3">
+                            <span className="text-xs before:content-[''] before:absolute before:w-8 before:h-[2px] before:bg-sky-400 before:left-0 before:top-3 pl-10">
+                                What's Next?
+                            </span>
+                        </div>
+                        <h1 className="text-3xl font-medium text-sky-400">
+                            Get In Touch
+                        </h1>
+                    </div>
+                    <div className="skills-content mb-12 lg:mb-0 py-10 md:py-16 px-5 md:px-10 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded-2xl">
+                        <div className="contact-content space-y-8">
+                            <p className="text-white text-center text-lg md:text-xl">
+                                I am open for any opportunities? Contact me on
+                                my email.
+                            </p>
+                            <button
+                                type="button"
+                                className="mx-auto flex items-center gap-x-2 text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3"
+                                onClick={() =>
+                                    window.open(
+                                        "mailto:email@example.com?subject=Subject&body=Body%20goes%20here"
+                                    )
+                                }>
+                                <HiMail className="text-white w-7 h-7" />
+                                <span>Let's talk</span>
+                            </button>
                         </div>
                     </div>
                 </div>
