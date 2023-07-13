@@ -4,24 +4,40 @@
 @tailwind utilities;
 
 .home-section {
-  background: url("/src/assets/images/sprinkle.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    background: url("/src/assets/images/sprinkle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html,
+body {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    background-color: #c1c5ce;
 }
 
 .bg-section {
-  background: #0a192f;
-  /* background: #1f2937; */
+    background: #0a192f;
+    /* background: #1f2937; */
 }
 
 .bg-primary {
-  background: #38bdf8;
+    background: #38bdf8;
 }
 
 .text-primary {
-  color: #38bdf8;
+    color: #38bdf8;
 }
