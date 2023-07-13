@@ -208,9 +208,7 @@ const HomePage = () => {
                                 type="button"
                                 className="mx-auto flex items-center gap-x-2 text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3"
                                 onClick={() =>
-                                    window.open(
-                                        "mailto:email@example.com?subject=Subject&body=Body%20goes%20here"
-                                    )
+                                    window.open("mailto:timajokyle24@gmail.com")
                                 }>
                                 <HiMail className="text-white w-7 h-7" />
                                 <span>Let's talk</span>
