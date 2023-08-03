@@ -5,7 +5,12 @@ import Skill from "../../components/skill";
 import * as DevIcons from "react-icons/di";
 import * as SimpIcons from "react-icons/si";
 import { HiMail } from "react-icons/hi";
-import { projects } from "../../utils/projects";
+import {
+    projects,
+    skills,
+    techStackLogos,
+    techStackNames,
+} from "../../utils/projects";
 import Project from "../../components/project";
 
 const HomePage = () => {
@@ -73,13 +78,13 @@ const HomePage = () => {
                         <div className="about-me flex flex-col-reverse md:flex-row gap-y-5 md:gap-0  justify-between">
                             <div className="sm:3/5 md:w-4/6 flex flex-col md:pr-5 gap-y-6 justify-center px-4 md:px-0">
                                 <h2 className="leading-7 lg:leading-8 text-justify md:text-start font-light text-md lg:text-lg">
-                                    I am a Fullstack{" "}
+                                    I am a{" "}
                                     <span className="text-sky-400">
-                                        Web and Mobile Developer
+                                        Fullstack Developer
                                     </span>{" "}
                                     from Camiguin Island, Philippines that
                                     specializes in React.js, Node.js, and
-                                    Laravel. Recently, I graduated from{" "}
+                                    Laravel. I graduated from{" "}
                                     <span className="text-sky-400">
                                         University of Science and Technology of
                                         Southern Philippines
@@ -118,37 +123,15 @@ const HomePage = () => {
                         </h1>
                     </div>
                     <div className="skills-content py-5 md:py-10 px-5 md:px-10 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded-2xl">
-                        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-10">
-                            <Skill Icon={DevIcons.DiHtml5} name={"HTML"} />
-                            <Skill Icon={DevIcons.DiCss3} name={"CSS"} />
-                            <Skill Icon={DevIcons.DiReact} name={"React JS"} />
-                            <Skill
-                                Icon={SimpIcons.SiNextdotjs}
-                                name={"Next JS"}
-                            />
-                            <Skill
-                                Icon={DevIcons.DiNodejsSmall}
-                                name={"Node JS"}
-                            />
-                            <Skill
-                                Icon={SimpIcons.SiExpress}
-                                name={"Express JS"}
-                            />
-                            <Skill Icon={SimpIcons.SiStrapi} name={"Strapi"} />
-                            <Skill
-                                Icon={SimpIcons.SiFlutter}
-                                name={"Flutter"}
-                            />
-                            <Skill
-                                Icon={SimpIcons.SiTensorflow}
-                                name={"Tensorflow"}
-                            />
-                            <Skill
-                                Icon={DevIcons.DiMongodb}
-                                name={"Mongo DB"}
-                            />
-                            <Skill Icon={DevIcons.DiMysql} name={"MySQL"} />
-                            <Skill Icon={SimpIcons.SiGit} name={"Git"} />
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+                            {skills.map((skill, index) => {
+                                return (
+                                    <Skill
+                                        logo={techStackLogos[skill]}
+                                        name={techStackNames[skill]}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
@@ -168,7 +151,7 @@ const HomePage = () => {
                         </h1>
                     </div>
                     <div className="projects-content">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                             {projects.map((project, index) => {
                                 return (
                                     <Project
@@ -177,6 +160,7 @@ const HomePage = () => {
                                         description={project.description}
                                         image={project.image}
                                         tech={project.tech}
+                                        url={project.url}
                                     />
                                 );
                             })}
