@@ -144,13 +144,14 @@ const HomePage = () => {
               <p className="text-white text-center text-lg md:text-xl">
                 I am open for any opportunities? Contact me on my email.
               </p>
-              <button
-                type="button"
-                className="mx-auto flex items-center gap-x-2 text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3"
-                onClick={() => window.open("mailto:timajokyle24@gmail.com")}>
-                <HiMail className="text-white w-7 h-7" />
-                <span>Let's talk</span>
-              </button>
+              <a href="mailto:timajokyle24@gmail.com" target="_blank" rel="noopener noreferrer">
+                <button
+                  type="button"
+                  className="mx-auto flex items-center gap-x-2 text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3">
+                  <HiMail className="text-white w-7 h-7" />
+                  <span>Let's talk</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
