@@ -37,15 +37,10 @@ const HomePage = () => {
                 rel="noopener noreferrer">
                 <button
                   type="button"
-                  className="text-white uppercase border border-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 text-center mr-2">
+                  className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3">
                   Download Resume
                 </button>
               </a>
-              <button
-                type="button"
-                className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3 mr-2">
-                About Me
-              </button>
             </div>
           </div>
         </div>
@@ -71,11 +66,13 @@ const HomePage = () => {
                   personal and business needs.
                 </h2>
                 <div className="mx-auto md:mx-0">
-                  <button
-                    type="button"
-                    className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3">
-                    Contact Me
-                  </button>
+                  <a href="#contact">
+                    <button
+                      type="button"
+                      className="text-white uppercase bg-sky-400 hover:bg-sky-500 font-medium rounded-lg text-sm px-3 py-3">
+                      Contact Me
+                    </button>
+                  </a>
                 </div>
               </div>
               <div className="w-2/3 sm:w-2/5 md:w-2/6 mx-auto flex justify-center md:justify-end">
