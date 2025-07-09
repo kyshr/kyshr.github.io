@@ -32,7 +32,7 @@ const HomePage = () => {
             </p>
             <div className="me-btns flex justify-center sm:justify-start gap-x-4 mt-4">
               <a
-                href="https://drive.google.com/file/d/1-JcvF_CiyUouNCKXi90_sQ0UQwsyWd4p/view?usp=sharing"
+                href="https://drive.google.com/file/d/1nkK0UEfvh-OKAi16DGLle2vX8J8PAuW9/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer">
                 <button
